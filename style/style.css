@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+body{
+    margin: 0;
+}
+.app{
+    height: 100vh;
+    width: 100vw;
+}
+.ooo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: h1 .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+header{
+    gap: 270px;
+    width: 100vw;
+    font-family: "Ubuntu", sans-serif;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    background-color: rgb(39, 39, 39);
+    color: rgb(0, 255, 149);
+    font-weight: 800;
+    filter: drop-shadow(0px 0px 10px rgb(0, 255, 149));  
+}
+.app_nav{
+    font-family: "Ubuntu", sans-serif;
+    background-color: #1a1a1a;
+    color: #00ff99;
+    text-align: center;
+    padding: 25px;
+    font-size: 30px;
+
+    width: 96.35vw;
+    height: 40px;
+    bottom: 0;
+    text-shadow: 0 0 5px #00ff99;
+    box-shadow: 0px 0px 10px black;
+    animation: nav 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.ap_nav{
+    background-color: rgb(17, 17, 17);
+    width: 100vw;
+    height: 300px;
+
+}
+h1{
+    filter: drop-shadow(0px 0px 10px rgb(0, 255, 149));
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    animation: h1 1.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+table{
+    font-family: "Ubuntu", sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    color:rgb(0, 255, 149);
+    animation: table .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
+    height: 460px;
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(17, 17, 17);
+   
+}
+.a{
+    background-color: #2b2b2b;
+}
+.b{
+    border-radius: 5px 0px 0px 0px;
+}
+.c{
+    border-radius: 0px 5px 0px 0px;
+}
+.d{
+    border-radius: 0px 0px 0px 5px;
+}
+.f{
+    border-radius: 0px 0px 5px 0px;
+}
+td, th{
+    box-shadow: 0px 0px 10px rgb(0, 255, 149);
+    font-family: "Sour Gummy", sans-serif;
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+    border:0px solid #444;
+    transition: background-color 0.3s ease;
+}
+tr th{
+    font-family: "Lacquer", serif;
+}
+main button{
+    background-image: linear-gradient(120deg, rgb(0, 255, 149), rgb(35, 153, 104));
+    border: 0;
+    outline: 0;
+    color: rgb(0, 0, 0);
+    width: 230px;
+    height: 67px;
+    font-size: 90%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Sour Gummy", sans-serif;
+    transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation: btn 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+button:hover{
+    box-shadow: 0px 0px 10px rgb(0, 255, 149);
+    transform: scale(1.11);
+    background-image: linear-gradient(120deg, rgb(35, 153, 104), rgb(0, 255, 149));
+}
+#loginBtn{
+    width: 100px;
+    font-size: 20px;
+    height: 50px;
+    background-image: linear-gradient(120deg, rgb(0, 255, 149), rgb(35, 153, 104));
+    border: 0;
+    outline: 0;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Sour Gummy", sans-serif;
+    transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes table{
+    0%{
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes h1{
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes btn{
+    0%{
+        transform: rotateX(180deg)
+        scale(0);
+    }
+    100%{
+        transform: rotateX(360deg)
+        scale(1);
+    }
+}
+@keyframes nav{
+    0%{
+        transform: translateX(500px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+#loginBtn{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    animation: spin 1.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#loginBtnn{
+    width: 100px;
+    font-size: 20px;
+    height: 30px;
+    background-image: linear-gradient(120deg, rgb(0, 255, 149), rgb(35, 153, 104));
+    border: 0;
+    outline: 0;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Sour Gummy", sans-serif;
+    transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#modal {
+    color: rgb(0, 255, 149);
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: "Sour Gummy", sans-serif;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s;
+    
+}
+
+#modal.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+#modal .modal-content {
+    backdrop-filter: blur(9px);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    position: relative;
+    
+}
+
+#modal .modal-content h2 {
+    margin-top: 0;
+}
+
+#closeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+}
+#closeBtn:hover{
+    background-color: #444;
+    border-radius: 50%;
+}
+#spinner {
+    display: none;
+    margin: 20px auto;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+
+  
+form input{
+    font-family: "Sour Gummy", sans-serif;
+    background-color: #00ff99;
+    border: 0;
+    outline: 0;
+    width: 150px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+
+#formSection_2 h2{
+    color: rgb(0, 255, 149);
+}
+
+.o{
+    transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: #000000;
+    font-weight: 900;
+}
+
+header img{
+    cursor: pointer;
+}
