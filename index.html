@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказ билетов</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <style>
+
+  
+      .btn-buy_2 {
+        background-color: rgb(0, 255, 149);
+        color: #000000;
+        border: none;
+        padding: 15px 30px;
+        font-size: 90%;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+  
+      .btn-buy_2:hover {
+        background-color: #00cc99;
+      }
+  
+      .modal_2 {
+        font-family: "Ubuntu", sans-serif;
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        backdrop-filter: blur(9px);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 255, 149, 0.5);
+        z-index: 1000;
+        text-align: left;
+        width: 400px;
+      }
+  
+      .modal_2 input {
+        font-family: "Ubuntu", sans-serif;
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid rgb(0, 255, 149);
+        border-radius: 5px;
+        background-color: #2b2b2b;
+        color: white;
+      }
+  
+      .modal_2 button {
+        font-family: "Ubuntu", sans-serif;
+        background-color: rgb(0, 255, 149);
+        color: #000000;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: block;
+        margin: 10px auto 0;
+      }
+  
+      .modal_2 button:hover {
+        background-color: #00cc99;
+      }
+  
+      .success-message_2 {
+        
+        font-family: "Ubuntu", sans-serif;
+        text-align: center;
+        font-size: 20px;
+        color: rgb(0, 255, 149);
+        display: none;
+      }
+  
+      .overlay_2 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 999;
+      }
+
+      .loading-spinner_2 {
+      display: none;
+      border: 4px solid rgba(0, 255, 149, 0.3);
+      border-top: 4px solid rgb(0, 255, 149);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin_2 1s linear infinite;
+      margin: 20px auto;
+    }
+
+    @keyframes spin_2 {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <header>
+          <div class="ooo">
+            <img width="200" src="./img/pngwing.com.png" alt="">
+            билеты!!!
+          </div>
+          
+            <h1>Заказ билетов</h1>
+            <div class="ap">
+                <button id="loginBtn">Login</button>
+            </div>
+        </header>
+        <main>
+            <marquee scrollamount="14" behavior="" direction=""><img width="400" src="./img/plane.png" alt=""></marquee><br>
+            <table>
+                <tr>
+                    <th class="b">Direction</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Price</th>
+                    <th class="c">Buy</th>
+                </tr>
+                <tr>
+                    <td>Moscow - New York</td>
+                    <td>26 november 2024</td>
+                    <td>12:30</td>
+                    <td>300$</td>
+                    <td><button class="btn-buy_2" onclick="openModal_2()">Buy a ticket</button></td>
+                </tr>
+                <tr class="a">
+                    <td>Moscow - Tokyo</td>
+                    <td>25 november 2024</td>
+                    <td>16:00</td>
+                    <td>400$</td>
+                    <td><button class="btn-buy_2" onclick="openModal_2()">Buy a ticket</button></td>
+                </tr>
+                <tr>
+                    <td class="d">Moscow - London</td>
+                    <td>30 november 2024</td>
+                    <td>00:00</td>
+                    <td>600$</td>
+                    <td class="f"><button class="btn-buy_2" onclick="openModal_2()">Buy a ticket</button></td>
+                </tr>
+                <tr class="a">
+                    <td>Moscow - USA</td>
+                    <td>1 december 2024</td>
+                    <td>01:00</td>
+                    <td>750$</td>
+                    <td><button class="btn-buy_2" onclick="openModal_2()">Buy a ticket</button></td>
+                </tr>
+                <tr>
+                    <td class="d">Baku - London</td>
+                    <td>2 december 2024</td>
+                    <td>22:00</td>
+                    <td>450$</td>
+                    <td class="f"><button class="btn-buy_2" onclick="openModal_2()">Buy a ticket</button></td>
+                </tr>
+            </table>
+            <nav class="ap_nav"></nav>
+            <nav class="app_nav">
+                &copy; 2024 Airplane tickets - All rights reserved
+            </nav>
+        </main>
+        
+    </div>
+
+    
+    <div id="modal">
+        <div class="modal-content">
+          <span id="closeBtn">&times;</span>
+          <h2>Register</h2>
+          <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <button id="loginBtnn" type="submit">Register</button>
+          </form>
+          <div id="spinner"></div>
+        </div>
+      </div>
+    
+
+
+      <div class="overlay_2" id="overlay_2"></div>
+
+  <div class="modal_2" id="paymentModal_2">
+    <div id="formSection_2">
+      <h2>Введите данные карты</h2>
+      <input type="text" placeholder="Номер карты">
+      <input type="text" placeholder="Имя на карте">
+      <input type="text" placeholder="Срок действия">
+      <input type="text" placeholder="CVC">
+      <button class="o" onclick="buyTicket_2()">Оплатить</button>
+    </div>
+    <div class="loading-spinner_2" id="loadingSpinner_2"></div>
+    <div class="success-message_2" id="successMessage_2">Билет куплен!</div>
+  </div>
+
+
+      <script src="./script.js">
+
+      </script>
+
+
+</body>
+
